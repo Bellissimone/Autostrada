@@ -1,11 +1,8 @@
+
 /**
  * 
- * @author  Alessio Farinelli
- *          in collaborazione con gli altri membri del gruppo :
- *          Simone Belli
- *          Shandor Taccone
- *          Vincenzo Marono
- * 
+ * @author: Belli Simone,  matricola: 254437 
+ *          Gruppo studio: Alessio Farinelli, Shandor Taccone, Vincenzo Marono. 
  */
 
 import java.util.*;
@@ -13,13 +10,13 @@ import src.AutostradeJava.*;
 import src.AutostradeJava.Testing.*;
 
 public class App {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         HashMap<Integer, Percorso> percorsi = new HashMap<Integer, Percorso>();
 
         // creazione veicolo
         BmwX1 bmw = new BmwX1();
-        
+
         // lista tariffe autostrada
         LinkedList<Float> tariffe = new LinkedList<Float>();
         tariffe.add(1.2f);
@@ -45,12 +42,12 @@ public class App {
         // simuliamo l'ingresso dell'auto al casello c1 e l'uscita al casello c2
         // l'ingresso dell'auto avrà l'effetto di produrre un ogetto Percorso che
         // indicherà il percorso tramite il casello di ingresso dell'auto che lo sta
-        // percorrendo. sul biglietto verrà stampato l'id di questo percorso che 
-        // servirà all'arrivo al casello di uscita per recuperare l'ogetto percorso 
+        // percorrendo. sul biglietto verrà stampato l'id di questo percorso che
+        // servirà all'arrivo al casello di uscita per recuperare l'ogetto percorso
         // dell' hashmap percorsi.
         // memorizzeremo l'id ( a scopo di test ) in una variabile intera.
         // questo oggetto servirà per calcolare il pedaggio
-        
+
         Percorso p = bmw.ingresso(ingresso);
         int id = p.getId();
         percorsi.put(id, p);
